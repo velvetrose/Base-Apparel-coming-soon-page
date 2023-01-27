@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="Stylesheet" href="Stylesheet/css/main.css" <!-- Feel free to remove these styles or customise in your own
+    stylesheet 👍 -->
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.svg">
+  </header>
+  <main>
+
+    <picture class="preview-container">
+      <source media="(min-width: 745px)" srcset="images/hero-desktop.jpg">
+      <source media="(max-width: 746px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero-desktop.jpg">
+    </picture>
+
+    <div class="main-content">
+      <div class="heading">
+        <h1>WE'RE<br><span>COMING<br>SOON</span></h1>
+      </div>
+
+      <div class="description">
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+      </div>
+      
+      <div class="input-section">
+        <form class="subscription">
+          <input type="email" placeholder="Email Address" class="type-box" id="emailField" oninput="this.setCustomValidity('')">
+          <img src="images/icon-error.svg" id="error-btn">
+          <button type="submit" value="Submit" class="submit-btn" onclick="validate(event)">
+            <img src="images/icon-arrow.svg">
+          </button>
+        </form>
+        <p id="errMsg">Please provide a valid email</p>
+        <p id="successMsg">Success!</p>
+      </div>
+      
+      
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/velvetrose">Sarah Susan</a>.
+      </p>
+    </div>
+
+
+  </main>
+
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

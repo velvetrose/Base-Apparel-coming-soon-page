@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+header {
+  padding: 1.5rem;
+}
+headerimg {
+  width: 25%;
+}
+
+.preview-container {
+  width: 100%;
+  flex-basis: 40%;
+}
+.preview-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.heading h1 {
+  color: hsl(0deg, 36%, 70%);
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+}
+.heading h1 span {
+  color: hsl(0deg, 6%, 24%);
+  font-weight: 600;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem 0 2rem;
+}
+
+.description p {
+  color: hsl(0deg, 36%, 70%);
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.subscription .type-box {
+  background: none;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+  color: hsl(0deg, 6%, 24%);
+}
+.subscription .type-box::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+.subscription .type-box:-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+.subscription .type-box::placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+.subscription .type-box:focus {
+  outline: none;
+}
+.subscription .type-box:invalid {
+  outline: 2px solid hsl(0deg, 93%, 68%);
+}
+.subscription .submit-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  filter: drop-shadow(0.25rem 0.8rem 1rem hsl(0deg, 36%, 70%));
+  transform: scale(1.15);
+  transition: all 0.75s ease-in-out;
+}
+.subscription .submit-btn:hover {
+  transform: scale(1.25);
+  background: linear-gradient(200deg, hsl(0deg, 76%, 88%), hsl(0deg, 70%, 80%));
+  cursor: pointer;
+}
+
+#error-btn {
+  position: absolute;
+  right: 0;
+  right: 6rem;
+  top: 12px;
+  display: none;
+}
+
+#errMsg {
+  display: none;
+  padding-left: 2rem;
+  color: hsl(0deg, 93%, 68%);
+}
+
+#successMsg {
+  display: none;
+  padding-left: 2rem;
+  color: green;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 0.5rem;
+  color: hsl(0deg, 6%, 24%);
+}
+.attribution a {
+  color: hsl(0deg, 36%, 70%);
+}
+
+@media screen and (min-width: 745px) {
+  body {
+    overflow: hidden;
+  }
+  header {
+    padding: 1.5rem 1.5rem 1.5rem 5rem;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-content {
+    width: 70%;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    padding: 3rem 5rem 3rem 5rem;
+    gap: 1.25rem;
+  }
+  .preview-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    height: 100vh;
+  }
+  .preview-container img {
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+  }
+  .heading h1 {
+    text-align: start;
+    letter-spacing: 0.5rem;
+    font-size: 3.5rem;
+  }
+  .heading h1 span {
+    color: hsl(0deg, 6%, 24%);
+    font-weight: 600;
+  }
+  .description p {
+    text-align: start;
+    font-weight: 400;
+    line-height: 1.25rem;
+    font-size: 1rem;
+  }
+  .attribution {
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */

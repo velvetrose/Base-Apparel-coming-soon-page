@@ -1,0 +1,208 @@
+@import 'config';
+
+body{
+    background: $gradient1;
+    font-family: $font-family;
+}
+main{
+    @include flexColumn;
+    gap: 5rem;
+}
+header{
+    padding: 1.5rem;
+    &img{
+        width: 25%;
+    }
+}
+
+.preview-container{
+    width: 100%;
+    flex-basis: 40%;
+
+    & img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.heading h1{
+    color: $primary-color1;
+    font-weight: map-get($font-weights,light);
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-size: 2.5rem;;
+
+    & span{
+        color: $neutral-color;
+        font-weight: map-get($font-weights,semi-bold);
+    }
+}
+
+.main-content{
+    @include flexColumn;
+    gap:2rem;
+    padding: 0 2rem 0 2rem;
+}
+
+.description p{
+    color: $primary-color1;
+    text-align: center;
+    font-weight: map-get($font-weights,regular);
+    line-height: 1.5rem;
+    font-size: $font-size;
+}
+
+.subscription{
+    @include flexRow;
+    position: relative;
+
+    & .type-box{
+        background: none;
+        border: 1px solid $primary-color1;
+        padding: 1rem;
+        border-radius: 2rem;
+        width: 100%;  
+        color: $neutral-color;
+
+        &::placeholder{
+            color: $primary-color1;
+            opacity: 0.5;
+        }
+
+        &:focus{
+            outline: none;
+        }
+        &:invalid{
+            outline: 2px solid $primary-color2;
+        }
+    }
+
+
+    & .submit-btn{
+        @include flexRow; 
+        @include flexCenter;
+        background: $gradient2;
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 2rem;
+        border: none;
+        position: absolute;
+        right: 0px;
+        top:0;
+        bottom: 0;
+        filter: drop-shadow(0.25rem 0.8rem 1rem $primary-color1);
+        transform: scale(1.15);
+        transition: all 0.75s ease-in-out;
+
+        &:hover{
+            transform: scale(1.25);
+            background: $gradient2-effect;
+            cursor: pointer;
+        }
+    }
+}
+
+#error-btn{
+    position: absolute;
+    right:0;
+    right: 6rem;
+    top: 12px;
+    display: none;
+}
+
+
+#errMsg{
+    display: none;
+    padding-left: 2rem;
+    color: $primary-color2;
+  }
+#successMsg{
+    display: none;
+    padding-left: 2rem;
+    color: green;
+}
+
+  .input-section{
+    @include flexColumn;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+
+footer{
+    @include flexRow;
+    @include flexCenter;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding: 0.5rem;
+    color: $neutral-color;
+
+    & a{
+        color: $primary-color1;
+    }
+  }
+
+
+
+  //RESPONSIVE DESIGN FOR DESKTOP WEBSITE
+
+@media screen and (min-width:745px){
+
+    body{
+        overflow: hidden;
+    }
+    header{
+        padding: 1.5rem 1.5rem 1.5rem 5rem;
+    }
+    main{
+        @include flexRow;
+    }
+    .main-content{
+        width: 70%;
+        flex-basis: 50%;
+        @include flexCenter;
+        align-items:flex-start ;
+        padding: 3rem 5rem 3rem 5rem;
+        gap:1.25rem;
+    }
+
+    .preview-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 40%;
+        height: 100vh;
+        
+        & img{
+            width: 100%;
+            height: 100%;
+            margin-left: 1rem;
+        }
+    }
+
+
+    .heading h1{
+        text-align: start;
+        letter-spacing: 0.5rem;
+        font-size: 3.5rem;;
+    
+        & span{
+            color: $neutral-color;
+            font-weight: map-get($font-weights,semi-bold);
+        }
+    }
+
+    .description p{
+        text-align: start;
+        font-weight: map-get($font-weights,regular);
+        line-height: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .attribution{
+        margin-top: 1rem;
+    }
+
+}
