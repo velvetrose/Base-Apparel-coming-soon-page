@@ -66,5 +66,5 @@ This tested my flexbox knowledge so much, along with positioning and layout chan
 
 ## Author
 
-- Frontend Mentor - [@yvelvetrose](https://www.frontendmentor.io/profile/velvetrose)
+- Frontend Mentor - [@velvetrose](https://www.frontendmentor.io/profile/velvetrose)
 
